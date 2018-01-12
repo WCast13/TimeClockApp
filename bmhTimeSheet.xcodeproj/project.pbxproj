@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D56416916C6298E9C6BDCF3 /* Pods_bmhTimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F17607D936B598478EAE896 /* Pods_bmhTimeSheet.framework */; };
 		3DBEE85D2008A03D006D2314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE85C2008A03D006D2314 /* AppDelegate.swift */; };
 		3DBEE85F2008A03D006D2314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE85E2008A03D006D2314 /* ViewController.swift */; };
 		3DBEE8622008A03D006D2314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBEE8602008A03D006D2314 /* Main.storyboard */; };
 		3DBEE8642008A03D006D2314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBEE8632008A03D006D2314 /* Assets.xcassets */; };
 		3DBEE8672008A03D006D2314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBEE8652008A03D006D2314 /* LaunchScreen.storyboard */; };
+		3DBEE8732008A9F6006D2314 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE8722008A9F6006D2314 /* Employee.swift */; };
+		3DBEE8792008AB0C006D2314 /* TimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE8782008AB0C006D2314 /* TimeEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BEC0B6BD706F7EEFFF2AE0D /* Pods-bmhTimeSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bmhTimeSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-bmhTimeSheet/Pods-bmhTimeSheet.release.xcconfig"; sourceTree = "<group>"; };
 		3DBEE8592008A03D006D2314 /* bmhTimeSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bmhTimeSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBEE85C2008A03D006D2314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DBEE85E2008A03D006D2314 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		3DBEE8632008A03D006D2314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DBEE8662008A03D006D2314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DBEE8682008A03D006D2314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DBEE8722008A9F6006D2314 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		3DBEE8782008AB0C006D2314 /* TimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntry.swift; sourceTree = "<group>"; };
+		5AA69190A0B8F0CD7F0101F3 /* Pods-bmhTimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bmhTimeSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bmhTimeSheet/Pods-bmhTimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
+		9F17607D936B598478EAE896 /* Pods_bmhTimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bmhTimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D56416916C6298E9C6BDCF3 /* Pods_bmhTimeSheet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38722B2CA1B922F94868211A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AA69190A0B8F0CD7F0101F3 /* Pods-bmhTimeSheet.debug.xcconfig */,
+				3BEC0B6BD706F7EEFFF2AE0D /* Pods-bmhTimeSheet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3DBEE8502008A03D006D2314 = {
 			isa = PBXGroup;
 			children = (
 				3DBEE85B2008A03D006D2314 /* bmhTimeSheet */,
 				3DBEE85A2008A03D006D2314 /* Products */,
+				38722B2CA1B922F94868211A /* Pods */,
+				7F734FE496FDF3BB83B6DF22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +74,56 @@
 		3DBEE85B2008A03D006D2314 /* bmhTimeSheet */ = {
 			isa = PBXGroup;
 			children = (
-				3DBEE85C2008A03D006D2314 /* AppDelegate.swift */,
-				3DBEE85E2008A03D006D2314 /* ViewController.swift */,
-				3DBEE8602008A03D006D2314 /* Main.storyboard */,
-				3DBEE8632008A03D006D2314 /* Assets.xcassets */,
-				3DBEE8652008A03D006D2314 /* LaunchScreen.storyboard */,
-				3DBEE8682008A03D006D2314 /* Info.plist */,
+				3DBEE8712008A9DC006D2314 /* Model */,
+				3DBEE86F2008A99D006D2314 /* View */,
+				3DBEE86E2008A975006D2314 /* Controller */,
+				3DBEE8702008A9BD006D2314 /* Supporting Files */,
 			);
 			path = bmhTimeSheet;
+			sourceTree = "<group>";
+		};
+		3DBEE86E2008A975006D2314 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DBEE85C2008A03D006D2314 /* AppDelegate.swift */,
+				3DBEE85E2008A03D006D2314 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DBEE86F2008A99D006D2314 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DBEE8652008A03D006D2314 /* LaunchScreen.storyboard */,
+				3DBEE8602008A03D006D2314 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DBEE8702008A9BD006D2314 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DBEE8632008A03D006D2314 /* Assets.xcassets */,
+				3DBEE8682008A03D006D2314 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DBEE8712008A9DC006D2314 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DBEE8722008A9F6006D2314 /* Employee.swift */,
+				3DBEE8782008AB0C006D2314 /* TimeEntry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F734FE496FDF3BB83B6DF22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F17607D936B598478EAE896 /* Pods_bmhTimeSheet.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DBEE86B2008A03D006D2314 /* Build configuration list for PBXNativeTarget "bmhTimeSheet" */;
 			buildPhases = (
+				DA20D398EF436D4C59B27600 /* [CP] Check Pods Manifest.lock */,
 				3DBEE8552008A03D006D2314 /* Sources */,
 				3DBEE8562008A03D006D2314 /* Frameworks */,
 				3DBEE8572008A03D006D2314 /* Resources */,
+				70A5136BD1675FC5FDA27880 /* [CP] Embed Pods Frameworks */,
+				86E8ED4F3E67A9BCF673135B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +196,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70A5136BD1675FC5FDA27880 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bmhTimeSheet/Pods-bmhTimeSheet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bmhTimeSheet/Pods-bmhTimeSheet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86E8ED4F3E67A9BCF673135B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bmhTimeSheet/Pods-bmhTimeSheet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA20D398EF436D4C59B27600 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bmhTimeSheet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3DBEE8552008A03D006D2314 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3DBEE85F2008A03D006D2314 /* ViewController.swift in Sources */,
+				3DBEE8732008A9F6006D2314 /* Employee.swift in Sources */,
 				3DBEE85D2008A03D006D2314 /* AppDelegate.swift in Sources */,
+				3DBEE8792008AB0C006D2314 /* TimeEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +395,7 @@
 		};
 		3DBEE86C2008A03D006D2314 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AA69190A0B8F0CD7F0101F3 /* Pods-bmhTimeSheet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +411,7 @@
 		};
 		3DBEE86D2008A03D006D2314 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BEC0B6BD706F7EEFFF2AE0D /* Pods-bmhTimeSheet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
