@@ -15,6 +15,8 @@
 		3DBEE8672008A03D006D2314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBEE8652008A03D006D2314 /* LaunchScreen.storyboard */; };
 		3DBEE8732008A9F6006D2314 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE8722008A9F6006D2314 /* Employee.swift */; };
 		3DBEE8792008AB0C006D2314 /* TimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE8782008AB0C006D2314 /* TimeEntry.swift */; };
+		3DFDBB35200BC23F001DEF77 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFDBB33200BC23F001DEF77 /* CustomTableViewCell.swift */; };
+		3DFDBB36200BC23F001DEF77 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFDBB34200BC23F001DEF77 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		3DBEE8682008A03D006D2314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DBEE8722008A9F6006D2314 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		3DBEE8782008AB0C006D2314 /* TimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntry.swift; sourceTree = "<group>"; };
+		3DFDBB33200BC23F001DEF77 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		3DFDBB34200BC23F001DEF77 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		5AA69190A0B8F0CD7F0101F3 /* Pods-bmhTimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bmhTimeSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bmhTimeSheet/Pods-bmhTimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		9F17607D936B598478EAE896 /* Pods_bmhTimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bmhTimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +81,7 @@
 				3DBEE8712008A9DC006D2314 /* Model */,
 				3DBEE86F2008A99D006D2314 /* View */,
 				3DBEE86E2008A975006D2314 /* Controller */,
+				3DFDBB32200BC220001DEF77 /* Custom Table View Cell */,
 				3DBEE8702008A9BD006D2314 /* Supporting Files */,
 			);
 			path = bmhTimeSheet;
@@ -116,6 +121,15 @@
 				3DBEE8782008AB0C006D2314 /* TimeEntry.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3DFDBB32200BC220001DEF77 /* Custom Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3DFDBB33200BC23F001DEF77 /* CustomTableViewCell.swift */,
+				3DFDBB34200BC23F001DEF77 /* CustomTableViewCell.xib */,
+			);
+			path = "Custom Table View Cell";
 			sourceTree = "<group>";
 		};
 		7F734FE496FDF3BB83B6DF22 /* Frameworks */ = {
@@ -190,6 +204,7 @@
 			files = (
 				3DBEE8672008A03D006D2314 /* LaunchScreen.storyboard in Resources */,
 				3DBEE8642008A03D006D2314 /* Assets.xcassets in Resources */,
+				3DFDBB36200BC23F001DEF77 /* CustomTableViewCell.xib in Resources */,
 				3DBEE8622008A03D006D2314 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DBEE85F2008A03D006D2314 /* ViewController.swift in Sources */,
+				3DFDBB35200BC23F001DEF77 /* CustomTableViewCell.swift in Sources */,
 				3DBEE8732008A9F6006D2314 /* Employee.swift in Sources */,
 				3DBEE85D2008A03D006D2314 /* AppDelegate.swift in Sources */,
 				3DBEE8792008AB0C006D2314 /* TimeEntry.swift in Sources */,
@@ -400,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QM78MLWEF;
-				INFOPLIST_FILE = bmhTimeSheet/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/bmhTimeSheet/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wctech.bmhTimeSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QM78MLWEF;
-				INFOPLIST_FILE = bmhTimeSheet/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/bmhTimeSheet/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wctech.bmhTimeSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";

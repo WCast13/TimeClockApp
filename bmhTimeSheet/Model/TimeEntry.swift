@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 
 class TimeEntry: Object {
-  @objc dynamic var date: Date?
-  @objc dynamic var clockIn: Date?
-  @objc dynamic var clockOut: Date?
-  @objc dynamic var totalHours = 0
+  @objc dynamic var date: String?
+  @objc dynamic var clockIn = 0.0
+  @objc dynamic var clockOut = 0.0
+  @objc dynamic var totalHours = ""
   var parentEmployee = LinkingObjects(fromType: Employee.self, property: "timeEntries")
 }
