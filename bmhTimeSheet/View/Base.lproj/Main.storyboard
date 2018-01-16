@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AG3-U2-ixG">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,8 +21,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="northernLights" translatesAutoresizingMaskIntoConstraints="NO" id="7zY-kh-EN9">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Pin #" textAlignment="center" minimumFontSize="70" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mJV-rA-ytm">
+                                <rect key="frame" x="85" y="156" width="400" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.19758668664383561" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI2-Uk-b1A">
-                                <rect key="frame" x="114" y="251" width="400" height="100"/>
+                                <rect key="frame" x="85" y="279" width="400" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="CLOCK IN/OUT">
@@ -33,13 +41,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Moon Hemp Time Sheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynP-h8-vv8">
-                                <rect key="frame" x="65" y="20" width="894" height="84"/>
+                                <rect key="frame" x="65" y="64" width="894" height="84"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="70"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3QE-ah-P0O">
-                                <rect key="frame" x="604" y="128" width="400" height="600"/>
+                                <rect key="frame" x="559" y="156" width="400" height="572"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -61,14 +69,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="1Mi-Oa-iId"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Pin #" textAlignment="center" minimumFontSize="70" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mJV-rA-ytm">
-                                <rect key="frame" x="114" y="128" width="400" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.19758668664383561" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="password"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -81,14 +81,60 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="UJX-Pv-c9t"/>
                     <connections>
                         <outlet property="pinNumberTextField" destination="mJV-rA-ytm" id="kI4-JL-pO3"/>
                         <outlet property="tableview" destination="3QE-ah-P0O" id="kHA-ED-P2W"/>
+                        <segue destination="vHB-3Y-DnJ" kind="show" identifier="goToAdmin" id="hyQ-rW-lK5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.6953125" y="133.59375"/>
+            <point key="canvasLocation" x="261.9140625" y="133.59375"/>
+        </scene>
+        <!--Admin-->
+        <scene sceneID="xBU-T9-Tb9">
+            <objects>
+                <viewController title="Admin" id="vHB-3Y-DnJ" customClass="AdminViewController" customModule="bmhTimeSheet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aew-Zz-K0o">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="northernLights" translatesAutoresizingMaskIntoConstraints="NO" id="VAC-q0-Of9">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VAC-q0-Of9" firstAttribute="bottom" secondItem="z5c-2K-wml" secondAttribute="bottom" id="Gtm-gq-oXv"/>
+                            <constraint firstItem="VAC-q0-Of9" firstAttribute="leading" secondItem="z5c-2K-wml" secondAttribute="leading" id="Y8D-Kj-nuo"/>
+                            <constraint firstItem="VAC-q0-Of9" firstAttribute="trailing" secondItem="z5c-2K-wml" secondAttribute="trailing" id="pNB-fm-LJk"/>
+                            <constraint firstItem="VAC-q0-Of9" firstAttribute="top" secondItem="Aew-Zz-K0o" secondAttribute="top" id="y6W-Mm-bhJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z5c-2K-wml"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1t-28-h3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910.54687499999989" y="133.59375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="18E-kO-nfk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AG3-U2-ixG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ugS-k6-84g">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dw4-dx-s9q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5q-yZ-av7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417" y="134"/>
         </scene>
     </scenes>
     <resources>

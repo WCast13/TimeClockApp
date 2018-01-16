@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D56416916C6298E9C6BDCF3 /* Pods_bmhTimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F17607D936B598478EAE896 /* Pods_bmhTimeSheet.framework */; };
+		3D262DF9200DBD6100240240 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D262DF8200DBD6100240240 /* AdminViewController.swift */; };
 		3DBEE85D2008A03D006D2314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE85C2008A03D006D2314 /* AppDelegate.swift */; };
 		3DBEE85F2008A03D006D2314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE85E2008A03D006D2314 /* ViewController.swift */; };
 		3DBEE8622008A03D006D2314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBEE8602008A03D006D2314 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		3BEC0B6BD706F7EEFFF2AE0D /* Pods-bmhTimeSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bmhTimeSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-bmhTimeSheet/Pods-bmhTimeSheet.release.xcconfig"; sourceTree = "<group>"; };
+		3D262DF8200DBD6100240240 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminViewController.swift; path = bmhTimeSheet/Controller/AdminViewController.swift; sourceTree = SOURCE_ROOT; };
 		3DBEE8592008A03D006D2314 /* bmhTimeSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bmhTimeSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBEE85C2008A03D006D2314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DBEE85E2008A03D006D2314 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				3DBEE85C2008A03D006D2314 /* AppDelegate.swift */,
 				3DBEE85E2008A03D006D2314 /* ViewController.swift */,
+				3D262DF8200DBD6100240240 /* AdminViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D262DF9200DBD6100240240 /* AdminViewController.swift in Sources */,
 				3DBEE85F2008A03D006D2314 /* ViewController.swift in Sources */,
 				3DFDBB35200BC23F001DEF77 /* CustomTableViewCell.swift in Sources */,
 				3DBEE8732008A9F6006D2314 /* Employee.swift in Sources */,

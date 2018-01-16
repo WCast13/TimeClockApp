@@ -30,6 +30,11 @@ class ViewController: UIViewController {
   
   @IBAction func clockInOutButton(_ sender: UIButton) {
     
+    if pinNumberTextField.text! == "9999" {
+      performSegue(withIdentifier: "goToAdmin", sender: self)
+    }
+    
+    
     currentEmployee = employeeArray?.filter("pinNumber == %@", pinNumberTextField.text!).first
     timeEntries = currentEmployee?.timeEntries.sorted(byKeyPath: "clockIn", ascending: false)
     currentTime = Date().timeIntervalSince1970
@@ -90,6 +95,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     tableview.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
+    self.navigationController?.setNavigationBarHidden(true, animated: true)
     
     timeFormatter.dateStyle = .none
     timeFormatter.timeStyle = .short
