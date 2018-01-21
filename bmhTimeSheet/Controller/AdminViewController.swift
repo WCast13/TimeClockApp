@@ -13,7 +13,7 @@ import RealmSwift
 class AdminViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   @IBOutlet var adminTableView: UITableView!
-//  @IBOutlet var calendarView: JTAppleCalendarView!
+
   
   let timeFormatter = DateFormatter()
   let dateFormatter = DateFormatter()
@@ -27,8 +27,6 @@ class AdminViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     timeFormatter.dateStyle = .none
     timeFormatter.timeStyle = .short
-    
-    
     
   }
   
