@@ -95,7 +95,6 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     tableview.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
-    self.navigationController?.setNavigationBarHidden(true, animated: true)
     
     timeFormatter.dateStyle = .none
     timeFormatter.timeStyle = .short
@@ -174,9 +173,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 100.0
+    return 80.0
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let destinationVC = segue.destination as! AdminViewController
+    
+    destinationVC.employeeArray = employeeArray
+  }
 }
 
 
