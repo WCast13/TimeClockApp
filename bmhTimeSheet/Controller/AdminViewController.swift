@@ -10,10 +10,16 @@ import UIKit
 import RealmSwift
 //import JTAppleCalendar
 
-class AdminViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AdminViewController: UIViewController {
   
   @IBOutlet var adminTableView: UITableView!
-
+  
+  var selectionStartDate = 0.0
+  var selectionEndDate = 0.0
+  
+  let minute = 60.0
+  let hour = 60.0 * 60.0
+  let day = 24.0 * 60.0
   
   let timeFormatter = DateFormatter()
   let dateFormatter = DateFormatter()
@@ -27,9 +33,37 @@ class AdminViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     timeFormatter.dateStyle = .none
     timeFormatter.timeStyle = .short
-    
+
   }
   
+  //MARK: - Date Picker Views
+  
+  @IBOutlet var startDatePicker: UIDatePicker!
+  @IBAction func startDatePickerChanged(_ sender: UIDatePicker) {
+    
+    let filterStartDate =  startDatePicker.date
+    let currentHour = Double(Calendar.current.component(.hour, from: filterStartDate))
+    selectionStartDate = (filterStartDate.timeIntervalSince1970) - (hour * (currentHour + 5))
+  
+  }
+  
+  
+  @IBOutlet var endDatePicker: UIDatePicker!
+  @IBAction func endDatePickerChanged(_ sender: UIDatePicker) {
+    let filterEndDate = endDatePicker.date
+    let currentHour = Double(Calendar.current.component(.hour, from: filterEndDate))
+    selectionEndDate = (filterEndDate.timeIntervalSince1970) + ((24 - currentHour - 5) * hour)
+    
+//    employeeArray
+  
+  }
+  
+}
+
+
+//MARK: - Table View Functions
+
+extension AdminViewController: UITableViewDelegate, UITableViewDataSource {
   
   func numberOfSections(in tableView: UITableView) -> Int {
     return (employeeArray?.count)!
@@ -46,8 +80,6 @@ class AdminViewController: UIViewController, UITableViewDelegate, UITableViewDat
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 60.0
   }
-  
-  
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return (employeeArray?[section].timeEntries.count)!
@@ -74,6 +106,5 @@ class AdminViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     return cell
   }
-  
 }
 
